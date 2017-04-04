@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package org.hiatusuk.messages;
+
+message MyMessage {
+  required int64 id = 1;
+  required string email = 2;
+  required string userExternalReference = 3;
+
+  enum UserRole {
+      MASTER = 1;
+      SERVANT = 2;
+  }
+
+  optional UserRole role = 4;
+  optional string correlationId = 5;
+}

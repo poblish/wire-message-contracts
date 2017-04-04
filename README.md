@@ -1,1 +1,1 @@
-# Wire demo# wire-message-contracts
+# wire-message-contracts
