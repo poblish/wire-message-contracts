@@ -37,7 +37,7 @@ public void testSerDeserEqualsAndHashcode() throws IOException {
 
     System.out.println("Created: " + original);
 
-    final byte[] bytes = MyMessage.ADAPTER.e.encode(original).clone();
+    final byte[] bytes = MyMessage.ADAPTER.encode(original).clone();
     final MyMessage decoded = MyMessage.ADAPTER.decode(bytes);
 
     // Test equality, every way we can
