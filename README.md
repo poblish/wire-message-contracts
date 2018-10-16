@@ -41,7 +41,7 @@ public void testSerDeserEqualsAndHashcode() throws IOException {
     final MyMessage decoded = MyMessage.ADAPTER.decode(bytes);
 
     // Test equality, every way we can
-    TestUtils.testEqualsHashcode(original, decoded);
+    EqHash.testEqualsHashcode(original, decoded);
 }
 ```
 
