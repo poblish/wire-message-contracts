@@ -1,5 +1,6 @@
 package org.hiatusuk;
 
+import org.hiatusuk.eqhash.EqHash;
 import org.hiatusuk.messages.MyMessage;
 import org.hiatusuk.messages.MyMessage.UserRole;
 import org.junit.Test;
@@ -26,7 +27,7 @@ public class WireTest {
         final MyMessage decoded = MyMessage.ADAPTER.decode(bytes);
 
         // Test equality, every way we can
-        TestUtils.testEqualsHashcode(original, decoded);
+        EqHash.testEqualsHashcode(original, decoded);
 
         // Just for fun...
         assertThat( bytes.length, equalTo(56));
